@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% block content %}
+     <div class="container">
+      <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <h2>ADD NEW BOOKS TO STORE</h2> <br>
+          <input type="text" placeholder="Enter the book name" name="name" >
+          <input type="text" placeholder="Enter book description"  name="description">
+          <input type="number" placeholder="Enter book price"  name="price">
+          <input type="file" name="image">
+          <button class="btn btn-dark "> Add Books<button>
+      </form>
+         </div>
+    {% endblock %}
